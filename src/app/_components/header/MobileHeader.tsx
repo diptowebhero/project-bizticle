@@ -1,11 +1,12 @@
 'use client'
 
-
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetHeader, SheetTrigger } from '@/components/ui/sheet'
 import { MenuIcon } from 'lucide-react'
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import Logo from './Logo'
+import Search from './Search'
 
 const MobileHeader = () => {
   const [open, setOpen] = useState<boolean>(false)
@@ -47,16 +48,25 @@ const MobileHeader = () => {
           <Button variant={"default"} className="rounded-full px-6">Login</Button>
         </div>
       </div>
-      <SheetContent side="left" className="flex flex-col gap-y-8 overflow-y-auto">
+      <SheetContent side="left" className="flex px-6 flex-col gap-y-8 overflow-y-auto">
         <SheetHeader className="px-4 text-left">
-          <h2>Mobile Content Here</h2>
         </SheetHeader>
-        <div>
-          search
-        </div>
-        <div>
-          links
-        </div>
+        <Search />
+
+        <nav className="flex flex-col gap-y-4">
+          <Link href="/freelancers/jobs" className="text-base font-medium">
+            For Freelancers
+          </Link>
+          <Link href="/business/hire" className="text-base font-medium">
+            For Business
+          </Link>
+          <Link href="/explore" className="text-base font-medium">
+            Explore
+          </Link>
+          <Link href="/why-bizticle" className="text-base font-medium">
+            Why Bizticle
+          </Link>
+        </nav>
       </SheetContent>
     </Sheet>
   )
