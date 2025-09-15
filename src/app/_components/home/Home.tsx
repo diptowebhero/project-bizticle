@@ -1,5 +1,6 @@
 import Hero from "../hero/Hero"
 import FindSolutionSection from "./FindSolutionSection"
+import GetStartedSection from "./GetStartedSection"
 import WhyChoiceUsSection from "./WhyChoiceUsSection"
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
     <>
       <Hero />
       <FindSolutionSection />
+      <GetStartedSection />
       <WhyChoiceUsSection />
     </>
   )
