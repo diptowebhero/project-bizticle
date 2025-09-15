@@ -1,8 +1,7 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import Image from "next/image"
+import AppButton from "../common/AppButton"
 
 const Hero = () => {
   return (
@@ -43,16 +42,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
           >
-            <Button className="rounded-full text-base px-6 py-3 bg-[#CC4FAF] hover:bg-[#CC4FAF]/90 border-0">
-              Get Started
-              <Image
-                src="/icons/arrow.svg"
-                alt="arrow right"
-                width={14}
-                height={12}
-                className="inline-block ml-2"
-              />
-            </Button>
+            <AppButton label="Get Started" />
           </motion.div>
         </motion.div>
       </div>

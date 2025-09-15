@@ -117,7 +117,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground overflow-hidden;
+    @apply bg-background text-foreground overflow-x-hidden;
   }
   .container {
     @apply mx-auto max-w-[1320px] px-4 sm:px-8 lg:px-12;
